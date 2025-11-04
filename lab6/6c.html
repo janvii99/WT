@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox Photo Gallery</title>
+<style>
+body {
+margin: 0;
+font-family: Verdana, sans-serif;
+background: #fafafa;
+}
+h1 {
+text-align: center;
+padding: 20px;
+color: #333;
+}
+.gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: stretch;
+gap: 20px;
+padding: 20px;
+}
+.gallery-item {
+flex: 0 1 calc(23% - 20px);
+background: #fff;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+overflow: hidden;
+transition: transform 0.3s;
+display: flex;
+flex-direction: column;
+}
+.gallery-item:hover {
+transform: translateY(-5px);
+}
+.gallery-item img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+display: block;
+}
+.caption {
+padding: 10px;
+text-align: center;
+font-size: 14px;
+color: #555;
+background: #f0f0f0;
+}
+@media (max-width: 768px) {
+.gallery-item {
+flex: 0 1 calc(45% - 20px);
+}
+}
+@media (max-width: 480px) {
+.gallery-item {
+flex: 0 1 100%;
+}
+}
+</style>
+</head>
+<body>
+<h1>Fresh Flexbox Photo Gallery</h1>
+<div class="gallery">
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1503264116251-35a269479413?w=400&h=300&fit=crop"
+alt="Gallery 1">
+<div class="caption">Mountain Lake</div>
+</div>
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=400&h=300&fit=crop"
+alt="Gallery 2">
+<div class="caption">City Skyline</div>
+</div>
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=400&h=300&fit=crop"
+alt="Gallery 3">
+<div class="caption">Desert Dunes</div>
+</div>
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=400&h=300&fit=crop"
+alt="Gallery 4">
+<div class="caption">Forest Path</div>
+</div>
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1521747116042-5a810fda9664?w=400&h=300&fit=crop"
+alt="Gallery 5">
+<div class="caption">Laptop Workspace</div>
+</div>
+<div class="gallery-item">
+<img src="/Users/janvipandya/Downloads/photo-1647962431451-d0fdaf1cf21c.jpeg" alt="Gallery
+6">
+<div class="caption">Beach Sunset</div>
+</div>
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=400&h=300&fit=crop"
+alt="Gallery 7">
+<div class="caption">Colorful Hot Air Balloons</div>
+</div>
+<div class="gallery-item">
+<img
+src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=400&h=300&fit=crop"
+alt="Gallery 8">
+<div class="caption">Starry Night Sky</div>
+</div>
+</div>
+</body>
+</html>
